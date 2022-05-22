@@ -1,0 +1,22 @@
+def ips_between(start, end):
+    x1= int(end.split(".")[3]) - int(start.split(".")[3])
+    x2= int(end.split(".")[2]) - int(start.split(".")[2])
+    x3= int(end.split(".")[1]) - int(start.split(".")[1])
+    x4= int(end.split(".")[0]) - int(start.split(".")[0])
+
+    a=x1
+    if x2==0:
+        b=0
+    else:    
+        b=x2*256
+        
+    if x3==0:
+        c=0
+    else:    
+        c=x3*256*256
+        
+    if x4==0:
+        d=0
+    else:    
+        d=x4*256*256*256
+    return a+b+c+d
